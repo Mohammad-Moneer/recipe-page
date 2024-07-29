@@ -1,0 +1,277 @@
+/* Start Variables */
+/*=================*/
+:root {
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+/*====================*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: var(--eggshell);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+
+ul, ol {
+  list-style: none;
+  /* Remove the default bullets */
+}
+
+/* End Global Rules */
+
+/* Start Content */
+/*===============*/
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8.75rem 0;
+  /* 140px 0 */
+  /* Added padding to create vertical distance */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+}
+
+.recipe-box {
+  background-color: var(--white);
+  color: var(--wenge-brown);
+  width: 46.875rem;
+  /* 750px */
+  border-radius: 1.5625rem;
+  /* 25px */
+  padding: 2.375rem;
+  /* 38px */
+}
+
+@media (max-width: 768px) {
+  .recipe-box {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 3rem;
+    /* 48px */
+    border-radius: 0;
+  }
+}
+
+.recipe-box .recipe-image {
+  overflow: hidden;
+  border-radius: 1.25rem;
+  /* 20px */
+}
+
+@media (max-width: 768px) {
+  .recipe-box .recipe-image {
+    border-radius: 0;
+  }
+}
+
+.recipe-box .recipe-image img {
+  width: 100%;
+}
+
+.recipe-content {
+  margin-top: 1.875rem;
+  /* 30px */
+}
+
+@media (max-width: 768px) {
+  .recipe-content {
+    padding: 0 2rem;
+    /* 0 32px */
+  }
+}
+
+h1, h2 {
+  font-family: "Young Serif", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  /* 40px */
+  color: var(--dark-charcoal);
+  margin-bottom: 1.25rem;
+  /* 20px */
+}
+
+h1+p {
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  /* 48px */
+}
+
+.preparation {
+  padding-left: 1.875rem;
+  /* 30px */
+  background-color: var(--rose-white);
+  margin-bottom: 3rem;
+  /* 48px */
+}
+
+.preparation span:first-child {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--dark-raspberry);
+  margin-bottom: 1rem;
+}
+
+ul li, ol li {
+  position: relative;
+  padding-left: 2.5rem;
+  /* 40px */
+  /* Space for custom bullets or numbering */
+}
+
+ul li {
+  line-height: 2;
+}
+
+ul li::before {
+  content: '•';
+  /* Bullet symbol */
+  position: absolute;
+  left: 0.5rem;
+  /* 8px */
+  top: -6px;
+  font-size: 1.5rem;
+}
+
+.preparation ul li::before {
+  color: var(--dark-raspberry);
+  /* Bullet color */
+}
+
+h2 {
+  font-size: 1.75rem;
+  /* 28px */
+  color: var(--nutmeg);
+  margin-bottom: 1.25rem;
+  /* 20px */
+}
+
+h2+ul li::before {
+  color: var(--nutmeg);
+  /* Bullet color */
+}
+
+hr {
+  margin: 1.5rem 0 2rem;
+  /* 24px 0 32px */
+  height: 0.125rem;
+  /* 2px */
+  background-color: var(--light-grey);
+  border: none;
+  /* Remove the default border */
+}
+
+h2+ol {
+  counter-reset: item;
+}
+
+h2+ol li {
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+h2+ol li::before {
+  counter-increment: item;
+  content: counter(item) ".";
+  /* numbering */
+  position: absolute;
+  left: 0.5rem;
+  /* 8px */
+  top: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--nutmeg);
+}
+
+h2+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+h2+table caption {
+  margin-bottom: 1rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+h2+table tr:not(:last-child) {
+  border-bottom: 0.0625rem solid var(--light-grey);
+  /* 1px */
+}
+
+h2+table th, h2+table td {
+  text-align: left;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  /* 15px */
+  width: 50%;
+}
+
+h2+table th {
+  padding-left: 1.25rem;
+  /* 20px */
+  font-weight: 400;
+}
+
+h2+table td {
+  color: var(--nutmeg);
+  font-weight: 600;
+}
+
+/* End Content */
+
+
+
+
+/* Start Attribution */
+/*===================*/
+.attribution {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  font-size: 0.69rem;
+  /* 11px */
+  text-align: center;
+  padding: 0.31rem;
+  /* 5px */
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* End Attribution */
