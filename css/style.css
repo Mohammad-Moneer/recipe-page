@@ -112,6 +112,7 @@ ul, ol {
 
 h1, h2 {
   font-family: "Young Serif", sans-serif;
+  font-weight: 600;
 }
 
 h1 {
@@ -138,7 +139,7 @@ h1+p {
 
 .preparation span:first-child {
   display: block;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 24px;
   color: var(--dark-raspberry);
   margin-bottom: 1rem;
