@@ -19,8 +19,13 @@ To get some details and background of this project visit the link below:
 
 ### Screenshot
 
-![Desktop Screenshot - Recipe Page](./Screenshot-Frontend Mentor Recipe page-Desktop.png)
-![Mobile Screenshot - Recipe Page](./Screenshot-Frontend Mentor Recipe page-Mobile.png)
+Desktop version
+
+![Desktop Screenshot - Recipe Page](./screenshot_recipe-page_desktop.png)
+
+Mobile version
+
+![Mobile Screenshot - Recipe Page](./screenshot_recipe-page_mobile.png)
 
 ### Links
 
